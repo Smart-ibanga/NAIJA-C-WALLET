@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Warrior</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="nigerian-flag">
+            <h1>🌍 Naija C Wallet</h1>
+            <p>Project by students of Krystalbal Comprehensive College, Lagos</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculate.html">Footprint</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+            </ul>
+        </nav>
+
+        <div class="calculator">
+            <h2>Let's check your carbon footprint!</h2>
+            
+            <label>Monthly Light Bill (Naira):</label>
+            <input type="number" id="electricity" placeholder="e.g 5000">
+            
+            <label>Weekly Transport (km):</label>
+            <select id="transport">
+                <option value="0">I trek or bike</option>
+                <option value="5">Danfo Bus</option>
+                <option value="8">Private Car</option>
+                <option value="10">Okada</option>
+            </select>
+            
+            <label>How many meat meals per week (Suya, fried meat etc):</label>
+            <input type="number" id="meat" min="0" max="21" placeholder="0-21">
+            
+            <label>Do you use generator often?</label>
+            <select id="generator">
+                <option value="0">Never</option>
+                <option value="5">Small I-pass-my-neighbor</option>
+                <option value="10">Big Generator</option>
+            </select>
+
+            <button onclick="calculate()">Calculate Now!</button>
+          
+            <div id="result"></div>
+        </div>
+
+        <footer class="group-members">
+            <h3>Project Group Members:</h3>
+            <p>Oladele Muiz</p>
+            <p>Kareem Ridwan</p>
+            <p>Koleosho Temiloluwa</p>
+            <p>Ikenye Precious</p>
+            <p>Under the guidance of Mr. Smart Ibanga</p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
