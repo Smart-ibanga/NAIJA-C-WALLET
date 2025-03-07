@@ -21,9 +21,10 @@
         </nav>
 
         <div class="calculator">
-            <h2>Let's check your carbon footprint!</h2>
+            <h2>Check your carbon wallet!</h2>
+            <p>Let's estimate your impact on the environment</p>
             
-            <label>Monthly Light Bill (Naira):</label>
+            <!-- <label>Monthly Light Bill (Naira):</label>
             <input type="number" id="electricity" placeholder="e.g 5000">
             
             <label>Weekly Transport (km):</label>
@@ -44,10 +45,70 @@
                 <option value="10">Big Generator</option>
             </select>
 
-            <button onclick="calculate()">Calculate Now!</button>
-          
-            <div id="result"></div>
+            <button onclick="calculate()">Calculate Now!</button> -->
+
+
+
+
+            <form id="carbonForm">
+                <div class="input-group">
+                    <label>Monthly Light Bill (kWh):</label>
+                    <input type="number" id="electricity" step="0.1" required>
+                    <small>(1 kWh = 0.5kg CO₂)</small>
+                </div>
+    
+                <div class="input-group">
+                    <label>Monthly Fuel Usage (Liters):</label>
+                    <input type="number" id="fuel" step="0.1" required>
+                    <small>(1 liter = 2.3kg CO₂)</small>
+                </div>
+    
+                <div class="input-group">
+                    <label>Cooking Fuel Type:</label>
+                    <select id="cookingType" required>
+                        <option value="lpg">LPG (kg)</option>
+                        <option value="kerosene">Kerosene (liters)</option>
+                    </select>
+                </div>
+    
+                <div class="input-group">
+                    <label>Monthly Cooking Fuel Usage:</label>
+                    <input type="number" id="cookingFuel" step="0.1" required>
+                    <small>(LPG: 1kg = 1.5kg CO₂, Kerosene: 1L = 2.5kg CO₂)</small>
+                </div>
+    
+                <div class="input-group">
+                    <label>Monthly Car Distance (km):</label>
+                    <input type="number" id="transportKm" step="0.1" required>
+                    <small>(1km = 0.15kg CO₂)</small>
+                </div>
+    
+                <div class="input-group">
+                    <label>Monthly Waste Generated (kg):</label>
+                    <input type="number" id="wasteKg" step="0.1" required>
+                    <small>(1kg = 0.1kg CO₂)</small>
+                </div>
+    
+                <button type="button" onclick="calculateFootprint()">
+                Calculate My Carbon Footprint
+                </button>
+            </form>
+    
+            <!-- <div class="result" id="result" style="display: none;">
+                <h3>Your Carbon Wallet Report</h3>
+                <p>Total Monthly CO₂: <strong id="totalFootprint"></strong></p>
+                <h4>Breakdown:</h4>
+                <ul>
+                    <li>Electricity: <span id="electricityEmission"></span></li>
+                    <li>Vehicle Fuel: <span id="fuelEmission"></span></li>
+                    <li>Cooking Fuel: <span id="cookingEmission"></span></li>
+                    <li>Transportation: <span id="transportEmission"></span></li>
+                    <li>Waste: <span id="wasteEmission"></span></li>
+                </ul>
+            </div> -->
         </div>
+          
+            <!-- <div id="result"></div> -->
 
         <footer class="group-members">
             <h3>Project Group Members:</h3>

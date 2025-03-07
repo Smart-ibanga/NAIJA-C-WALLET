@@ -90,7 +90,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 20px auto;
+    margin: 40px auto;
     overflow: hidden;
   }
   
@@ -118,6 +118,7 @@
 
   .wallet-content {
     padding: 20px;
+    margin: 5px 10px;
     text-align: center;
   }
   
@@ -126,6 +127,7 @@
     color: #666;
     line-height: 1.6;
     margin: 0;
+    justify-content: center;
   }
 
   .wallet p {
@@ -134,11 +136,15 @@
 
 
 .calculator {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
+
 
 input, select {
     padding: 8px;
@@ -147,6 +153,7 @@ input, select {
     width: 100%;
     box-sizing: border-box;
 }
+
 
 button {
     background: #008000;
@@ -159,6 +166,8 @@ button {
     transition: 0.3s;
 }
 
+
+
 button a {
     color: inherit;
     text-decoration: none;
@@ -168,6 +177,36 @@ button a {
 button:hover {
     background: #006400;
 }
+
+.input-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+}
+
+.breakdown { 
+    margin-top: 20px; 
+    padding: 15px; 
+    background: #e8f5e9; 
+    border-radius: 5px; 
+}
+
+.breakdown ul li {
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px;
+  }
 
 .group-members {
     background: #008000;
@@ -199,15 +238,13 @@ button:hover {
     line-height: 1.6;
 }
 
-.tip-card {
-    background: white;
+.tips{
+
     padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,100,0,0.1);
-    display: inline-block;
-    width: 250px;
+    text-align: justify;
+
 }
+  
 
 .did-you-know {
     background: #ffe4b5;

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="nigerian-flag">
+            <h1>🌍 Naija C Wallet</h1>
+            <p>Project by students of Krystalbal Comprehensive College, Lagos</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculate.html">Footprint</a></li>
+                <li><a href="learn.html">Learn more</a></li>
+            </ul>
+        </nav>
+        <div class="result" id="result" >
+            <h2>Your Carbon Wallet Statement</h2>
+            <p class="total">Total Monthly CO₂ Emission: <span id="total">0.00</span> kg</p>
+        
+            <div class="breakdown">
+                <h3>Breakdown:</h3>
+                <ul>
+                    <li>Electricity: <span id="electricity">0.00</span> kg</li>
+                    <li>Vehicle Fuel: <span id="fuel">0.00</span> kg</li>
+                    <li>Cooking Fuel: <span id="cooking">0.00</span> kg</li>
+                    <li>Transportation: <span id="transport">0.00</span> kg</li>
+                    <li>Waste: <span id="waste">0.00</span> kg</li>
+                </ul>
+            </div>
+            <div class="wallet">
+                <figure>
+                   <figcaption>What does this mean?</figcaption> 
+                </figure>
+                <div class="tips">
+                    <p>
+                        Determining a "safe" carbon footprint per person is more an exercise in aligning with global climate targets 
+                        than a hard-and-fast personal rule. Most climate scientists argue that to have a reasonable chance of limiting 
+                        global warming to 1.5°C above pre-industrial levels, an average per capita carbon emission of roughly 2 tonnes 
+                        (2,000 kg) of CO₂ per year is needed.
+                    </p>
+                    <div class="wallet-content">
+                        
+                            <h4>Let's break that down month by month:</h4>
+
+                            <p><b>Annual Target:</b> 
+                                <br> ~2,000 kg CO₂ per person per year
+                            </p> 
+                            
+                            <p><b>Monthly Calculation:</b> <br> Monthly CO₂ ≈ 2000 kg ÷ 12 ≈ 167 kg CO₂ per month</p>
+                    </div>
+                        <p>So, a rough target for a "safe" personal carbon footprint would be 
+                            about <b>167 kg of CO₂ per month.</b> 
+                        </p>
+                </div>
+            </div>
+            <footer class="group-members">
+                <h3>Project Group Members:</h3>
+                <p>Oladele Muiz</p>
+                <p>Kareem Ridwan</p>
+                <p>Koleosho Temiloluwa</p>
+                <p>Ikenye Precious</p>
+                <p>Under the guidance of Mr. Smart Ibanga</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // Get parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Display results
+        document.getElementById('total').textContent = urlParams.get('total');
+        document.getElementById('electricity').textContent = urlParams.get('electricity');
+        document.getElementById('fuel').textContent = urlParams.get('fuel');
+        document.getElementById('cooking').textContent = urlParams.get('cooking');
+        document.getElementById('transport').textContent = urlParams.get('transport');
+        document.getElementById('waste').textContent = urlParams.get('waste');
+    </script>
+</body>
+</html>
